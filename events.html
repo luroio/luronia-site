@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='fullcalendar/main.css' rel='stylesheet' />
     </head>
     <body class=" ">
         <a id="start"></a>
@@ -116,85 +117,7 @@
             </section>
             <section class="text-center">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                               <!-- <img alt="Image" src="img/avatar-round-1.png" />-->
-                                <h5>Founder</h5>
-                                <span>The highest rank of the FC. This is for the one who is running the Free Company.</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                               <!-- <img alt="Image" src="img/avatar-round-3.png" />-->
-                                <h5>Master Fighter/Crafter/Gatherer</h5>
-                                <span>These ranks are reserved for those who have advanced from apprentice status. Those with this rank are leaders in their respective category, and those who also help run the free company. Feel free to ask Master rank members for help!</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                                <img alt="Image" src="img/avatar-round-2.png" />
-                                <h5>Bernice Lucas</h5>
-                                <span>Chief of Operations</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                                <img alt="Image" src="img/avatar-round-4.png" />
-                                <h5>Cameron Nguyen</h5>
-                                <span>Lead Designer</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                                <img alt="Image" src="img/avatar-round-5.png" />
-                                <h5>Josie Web</h5>
-                                <span>Head of Development</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature feature-8">
-                                <img alt="Image" src="img/avatar-round-6.png" />
-                                <h5>Bryce Vaughn</h5>
-                                <span>Marketing Director</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end of row-->
-                </div>
-                <!--end of container-->
-            </section>
-            <section class="text-center">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6">
-                            <div class="cta">
-                                <h2>Want to join Luronia Cloud?</h2>
-                                <p class="lead">
-                                    Join the Luro.io Discord or /Tell any of the above Master Rank members!
-                                </p>
-                                <a class="btn btn--primary type--uppercase" href="https://discord.gg/mWSK9Jq">
-                                    <span class="btn__text">
-                                        Join Discord
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end of row-->
-                </div>
-                <!--end of container-->
-            </section>
-            <footer class="text-center space--sm footer-5  ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-                                <span class="type--fine-print">&copy;
-                                    <span class="update-year"></span> Luro.io</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div id='calendar'></div>
                     <!--end of row-->
                 </div>
                 <!--end of container-->
@@ -220,5 +143,17 @@
         <script src="js/spectragram.min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/scripts.js"></script>
+		<script src='fullcalendar/main.js'></script>
+		<script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+		</script>
     </body>
 </html>
